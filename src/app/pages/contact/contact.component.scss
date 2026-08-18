@@ -24,6 +24,76 @@
   line-height: 1.7;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.instagram-logo,
+.facebook-logo {
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+
+.contact-form-section {
+  padding: 0 0 4rem;
+}
+
+.contact-form {
+  max-width: 760px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(81, 69, 63, 0.08);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 14px 25px var(--shadow);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-row label {
+  font-weight: 700;
+  color: var(--cocoa);
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid rgba(81, 69, 63, 0.16);
+  border-radius: 0.9rem;
+  background: rgba(247, 242, 232, 0.4);
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: var(--cocoa);
+}
+
+.form-row textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
 @media (max-width: 900px) {
   .contact-wrap {
     grid-template-columns: 1fr;

@@ -4,9 +4,10 @@ export interface Book {
   author: string;
   slug: string;
   description: string;
+  synopsis: string;
   price: number | null;
   coverImage: string;
-  publishedYear: number;
+  publishedYear: string;
   category: string;
   status: 'Available' | 'Coming Soon';
 }
