@@ -1,19 +1,17 @@
 @if (book) {
-  <article class="book-card">
-    <img [src]="book.coverImage" [alt]="book.title" />
-    <div class="book-card__content">
-      <span class="book-category">{{ book.category }}</span>
-      <h3>{{ book.title }}</h3>
-      <p class="author">{{ book.author }}</p>
-      <p class="description">{{ book.description }}</p>
-      <div class="book-meta">
-        <span>{{ book.publishedYear }}</span>
-        <span>{{ book.status }}</span>
+  <a class="book-card-link" [routerLink]="['/books', book.slug]">
+    <article class="book-card">
+      <img [src]="book.coverImage" [alt]="book.title" />
+      <div class="book-card__content">
+        <span class="book-category">{{ book.category }}</span>
+        <h3>{{ book.title }}</h3>
+        <p class="author">{{ book.author }}</p>
+        <p class="description">{{ book.description }}</p>
+        <div class="book-meta">
+          <span>{{ book.publishedYear }}</span>
+          <span>{{ book.status }}</span>
+        </div>
       </div>
-      <div class="book-actions">
-        <span class="price">$ {{ book.price.toFixed(2) }}</span>
-        <a [routerLink]="['/books', book.slug]" class="secondary-button">View details</a>
-      </div>
-    </div>
-  </article>
+    </article>
+  </a>
 }

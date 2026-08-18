@@ -3,15 +3,15 @@ import { Book } from '../core/models/book.model';
 export const books: Book[] = [
   {
     id: 1,
-    title: 'The Lantern Keeper',
-    author: 'Wilkinson Wishing Tree Publishing',
-    slug: 'the-lantern-keeper',
+    title: 'The Legend of the Great Pumpkin',
+    author: 'Lani Wilkinson',
+    slug: 'the-legend-of-the-great-pumpkin',
     description:
-      'A warm and uplifting story about hope, community, and the light we carry for one another.',
-    price: 18.99,
+      'A timeless story celebrating kindness, imagination, and the magic of believing.',
+    price: null,
     coverImage: '/assets/images/books/Cover.png',
-    publishedYear: 2024,
-    category: 'Fiction',
+    publishedYear: 2026,
+    category: 'Children\'s Fiction',
     status: 'Available'
   },
   {
@@ -21,23 +21,10 @@ export const books: Book[] = [
     slug: 'wildflower-letters',
     description:
       'A lyrical collection of heartfelt notes and reflections exploring resilience, belonging, and renewal.',
-    price: 16.5,
+    price: null,
     coverImage: '/assets/images/books/GreatSnomanCover-comingsoon.png',
-    publishedYear: 2023,
+    publishedYear: 2027,
     category: 'Poetry',
     status: 'Available'
-  },
-  {
-    id: 3,
-    title: 'The Orchard at Dusk',
-    author: 'Wilkinson Wishing Tree Publishing',
-    slug: 'the-orchard-at-dusk',
-    description:
-      'A gentle, beautifully told journey into memory, family, and the quiet wisdom of place.',
-    price: 21.0,
-    coverImage: '/assets/images/books/HardcoverQRcode.png',
-    publishedYear: 2025,
-    category: 'Novel',
-    status: 'Coming Soon'
   }
 ];

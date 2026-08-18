@@ -4,7 +4,7 @@ export interface Book {
   author: string;
   slug: string;
   description: string;
-  price: number;
+  price: number | null;
   coverImage: string;
   publishedYear: number;
   category: string;
