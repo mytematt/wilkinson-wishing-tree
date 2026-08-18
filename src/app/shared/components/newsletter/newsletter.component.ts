@@ -11,7 +11,15 @@ import { Component } from '@angular/core';
           <h2>Receive publishing news and fresh releases.</h2>
         </div>
 
-        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify>
+        <form
+          class="newsletter-form"
+          name="newsletter"
+          method="POST"
+          action="/"
+          data-netlify="true"
+          netlify
+          (submit)="handleSubmit($event)"
+        >
           <input type="hidden" name="form-name" value="newsletter" />
           <input
             type="email"
@@ -22,6 +30,10 @@ import { Component } from '@angular/core';
           />
           <button type="submit" class="primary-button">Join newsletter</button>
         </form>
+
+        @if (statusMessage) {
+          <p class="form-status">{{ statusMessage }}</p>
+        }
       </div>
     </section>
   `,
@@ -60,6 +72,12 @@ import { Component } from '@angular/core';
       background: rgba(255, 255, 255, 0.6);
     }
 
+    .form-status {
+      margin: 1rem 0 0;
+      color: var(--forest);
+      font-weight: 600;
+    }
+
     @media (max-width: 820px) {
       .newsletter-inner {
         flex-direction: column;
@@ -68,4 +86,37 @@ import { Component } from '@angular/core';
     }
   `
 })
-export class NewsletterComponent {}
+export class NewsletterComponent {
+  statusMessage = '';
+
+  async handleSubmit(event: SubmitEvent): Promise<void> {
+    event.preventDefault();
+
+    const form = event.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    const body = new URLSearchParams();
+
+    formData.forEach((value, key) => {
+      body.append(key, value.toString());
+    });
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: body.toString()
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
+      this.statusMessage = 'Thanks for joining — you’re on the list.';
+      form.reset();
+    } catch {
+      this.statusMessage = 'Something went wrong. Please try again.';
+    }
+  }
+}
