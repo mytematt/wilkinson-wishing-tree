@@ -33,6 +33,35 @@
   font-size: 1.05rem;
 }
 
+.synopsis {
+  margin-top: 1rem;
+  color: var(--cocoa);
+  line-height: 1.8;
+  font-size: 1.02rem;
+}
+
+.where-to-buy {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(81, 69, 63, 0.08);
+  border-radius: 1rem;
+  background: rgba(247, 242, 232, 0.5);
+}
+
+.where-to-buy h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.where-to-buy p {
+  margin: 0.35rem 0;
+  color: var(--cocoa);
+  line-height: 1.7;
+}
+
 .meta-row,
 .purchase-row {
   display: flex;

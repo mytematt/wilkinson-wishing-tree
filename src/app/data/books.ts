@@ -14,6 +14,8 @@ export const books: Book[] = [
     coverImage: '/assets/images/books/Cover.png',
     publishedYear: '2026',
     category: 'Children\'s Fiction',
+    hardcover: 'https://shop.ingramspark.com/b/084?params=NIjU1nmGC3cOUDrmbIdcgOXDjStZod0rLUqGqfTV0ts',
+    paperback: 'https://www.amazon.com/Legend-Great-Pumpkin-Lani-Wilkinson/dp/B0HF1SCCL3/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.SYmJXZcetPFJG17iLfdduElZ4ivc2ftJUuiSZXNHhK4BIKnVuqF1Qx2iNM2jLdGVi-2ToxswFEn_hZ9bQ6ae-tOey7WnVj0759BHd5UwcE25O29FaVntV7Y5TKovoJIGN70r7XiTxHDYJdbdtDmFHBDJApFnxa1DUI-8kriZJnzZfz4GGRgNohlrbFA708yEFLbneEQRXslIlzMoNztlPtvWB7MNgKHp8CgZ2v5qTqVZX93UNjr-cKyMnoOXKLZhuE8fAhg0qDDNSKOqV2KXkKZApdR00txiZ5Q0MHN9S64.BOFD43xqBy1THwQ1BeCMdDr-S0Gvp3u4HsiZhOexWOw&qid=1787087215&sr=8-1',
     status: 'Available'
   },
   {

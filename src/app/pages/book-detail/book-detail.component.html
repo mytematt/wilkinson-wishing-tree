@@ -9,6 +9,25 @@
       <p class="author">by {{ book.author }}</p>
       <p class="description">{{ book.description }}</p>
       <p class="synopsis">{{ book.synopsis }}</p>
+
+      @if (book.hardcover || book.paperback) {
+        <div class="where-to-buy">
+          <h3>Where to Buy</h3>
+          @if (book.hardcover) {
+            <p>
+              <strong>Hardcover:</strong>
+              <a [href]="book.hardcover" target="_blank" rel="noopener noreferrer">Buy Hardcover</a>
+            </p>
+          }
+          @if (book.paperback) {
+            <p>
+              <strong>Paperback:</strong>
+              <a [href]="book.paperback" target="_blank" rel="noopener noreferrer">Buy Paperback</a>
+            </p>
+          }
+        </div>
+      }
+
       <div class="meta-row">
         <span>Published: {{ book.publishedYear }}</span>
         <span>Status: {{ book.status }}</span>
