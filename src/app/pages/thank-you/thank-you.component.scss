@@ -1,0 +1,25 @@
+.thank-you {
+  padding: 5rem 0;
+}
+
+.thank-you-card {
+  max-width: 740px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--forest-soft), white);
+  border: 1px solid rgba(28, 58, 45, 0.08);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 30px var(--shadow);
+}
+
+.thank-you-card h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+}
+
+.thank-you-card p:last-child {
+  color: var(--muted);
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}

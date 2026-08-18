@@ -1,0 +1,43 @@
+<main class="page-shell">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="section-label">Independent publisher</p>
+        <h1>Stories that bloom with heart and meaning.</h1>
+        <p class="lead">
+          Wilkinson Wishing Tree Publishing brings thoughtful books to readers seeking beauty,
+          depth, and a sense of wonder.
+        </p>
+        <div class="cta-group">
+          <a routerLink="/books" class="primary-button">Explore our books</a>
+          <a routerLink="/about" class="secondary-button">Learn our story</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Book collection illustration">
+        <div class="feature-book">
+          <span class="feature-book__badge">Featured</span>
+          <h2>The Lantern Keeper</h2>
+          <p>Hope-lit fiction for the season of renewal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured container">
+    <div class="section-heading">
+      <div>
+        <p class="section-label">Featured titles</p>
+        <h2>Our latest releases</h2>
+      </div>
+      <a routerLink="/books" class="secondary-button">View all books</a>
+    </div>
+
+    <div class="book-grid">
+      @for (book of books.slice(0, 3); track book.id) {
+        <app-book-card [book]="book" />
+      }
+    </div>
+  </section>
+
+  <app-newsletter />
+</main>

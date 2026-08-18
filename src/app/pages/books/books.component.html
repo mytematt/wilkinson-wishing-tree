@@ -1,0 +1,15 @@
+<section class="page-header">
+  <div class="container">
+    <p class="section-label">Our catalog</p>
+    <h1>Books by Wilkinson Wishing Tree</h1>
+    <p>Discover beautifully written books chosen to delight, comfort, and inspire readers.</p>
+  </div>
+</section>
+
+<section class="container books-wrap">
+  <div class="book-grid">
+    @for (book of books; track book.id) {
+      <app-book-card [book]="book" />
+    }
+  </div>
+</section>

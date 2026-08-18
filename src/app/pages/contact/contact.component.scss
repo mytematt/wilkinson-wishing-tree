@@ -1,0 +1,31 @@
+.contact-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0 4rem;
+}
+
+.contact-card {
+  background: white;
+  border: 1px solid rgba(28, 58, 45, 0.08);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  box-shadow: 0 14px 25px var(--shadow);
+}
+
+.contact-card h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.3rem;
+}
+
+.contact-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}

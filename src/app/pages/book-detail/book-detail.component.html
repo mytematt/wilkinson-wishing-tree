@@ -1,0 +1,25 @@
+@if (book) {
+  <article class="book-detail container">
+    <div class="book-detail__cover">
+      <img [src]="book.coverImage" [alt]="book.title" />
+    </div>
+    <div class="book-detail__content">
+      <p class="section-label">{{ book.category }}</p>
+      <h1>{{ book.title }}</h1>
+      <p class="author">by {{ book.author }}</p>
+      <p class="description">{{ book.description }}</p>
+      <div class="meta-row">
+        <span>Published: {{ book.publishedYear }}</span>
+        <span>Status: {{ book.status }}</span>
+      </div>
+      <div class="purchase-row">
+        <span class="price">$ {{ book.price.toFixed(2) }}</span>
+        <button class="primary-button" type="button">Add to cart</button>
+      </div>
+    </div>
+  </article>
+} @else {
+  <section class="container empty-state">
+    <h2>Book not found.</h2>
+  </section>
+}

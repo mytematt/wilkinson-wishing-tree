@@ -1,0 +1,32 @@
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div>
+      <p class="section-label">Stay connected</p>
+      <h2>Receive publishing news and fresh releases.</h2>
+    </div>
+
+    <form
+      class="newsletter-form"
+      name="newsletter"
+      method="POST"
+      action="/"
+      data-netlify="true"
+      netlify
+      (submit)="handleSubmit($event)"
+    >
+      <input type="hidden" name="form-name" value="newsletter" />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address"
+        aria-label="Email address"
+        required
+      />
+      <button type="submit" class="primary-button">Join newsletter</button>
+    </form>
+
+    @if (statusMessage) {
+      <p class="form-status">{{ statusMessage }}</p>
+    }
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a routerLink="/" class="brand" aria-label="Wilkinson Wishing Tree home">
+      <span class="brand-mark">W</span>
+      <span>Wilkinson Wishing Tree</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/books" routerLinkActive="active">Books</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/author" routerLinkActive="active">Author</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </nav>
+
+    <a routerLink="/books" class="primary-button header-cta">Browse books</a>
+  </div>
+</header>
