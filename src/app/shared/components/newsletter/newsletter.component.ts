@@ -11,8 +11,15 @@ import { Component } from '@angular/core';
           <h2>Receive publishing news and fresh releases.</h2>
         </div>
 
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your email address" aria-label="Email address" />
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify>
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            aria-label="Email address"
+            required
+          />
           <button type="submit" class="primary-button">Join newsletter</button>
         </form>
       </div>
