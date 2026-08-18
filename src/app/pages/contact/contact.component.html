@@ -58,7 +58,7 @@
 </section>
 
 <section class="container contact-form-section">
-  <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true">
+  <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" (submit)="onSubmit($event)">
     <input type="hidden" name="form-name" value="contact" />
 
     <div class="form-row">
