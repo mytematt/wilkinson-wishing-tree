@@ -1,0 +1,39 @@
+@use './shared/shared.scss';
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f9f6f2;
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f6f2;
+  color: var(--ink);
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+input {
+  font: inherit;
+}

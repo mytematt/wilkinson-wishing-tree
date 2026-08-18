@@ -1,0 +1,78 @@
+$forest: #1c3a2d;
+$forest-soft: #e9f3ee;
+$gold: #d9b76e;
+$stone: #f7f3ee;
+$ink: #1f1f1f;
+$muted: #5a5a5a;
+
+:root {
+  --forest: #{$forest};
+  --forest-soft: #{$forest-soft};
+  --gold: #{$gold};
+  --stone: #{$stone};
+  --ink: #{$ink};
+  --muted: #{$muted};
+  --shadow: rgba(28, 58, 45, 0.12);
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--forest);
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.page-header {
+  padding: 5rem 0 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.page-header p {
+  max-width: 720px;
+  margin: 1rem auto 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  background: var(--forest);
+  color: white;
+}
+
+.secondary-button {
+  background: transparent;
+  border-color: rgba(28, 58, 45, 0.2);
+  color: var(--forest);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-1px);
+}
