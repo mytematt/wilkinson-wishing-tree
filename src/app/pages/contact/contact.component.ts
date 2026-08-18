@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
+
   showSuccessModal = false;
+  submissionError = false;
 
   async onSubmit(event: SubmitEvent): Promise<void> {
     event.preventDefault();
@@ -21,15 +24,26 @@ export class ContactComponent {
     const payload = new URLSearchParams();
     formData.forEach((value, key) => payload.append(key, String(value)));
 
-    const response = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: payload.toString()
-    });
+    this.submissionError = false;
 
-    if (response.ok) {
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload.toString()
+      });
+
+      if (!response.ok) {
+        this.submissionError = true;
+        return;
+      }
+
       form.reset();
       this.showSuccessModal = true;
+    } catch {
+      this.submissionError = true;
+    } finally {
+      this.changeDetectorRef.markForCheck();
     }
   }
 

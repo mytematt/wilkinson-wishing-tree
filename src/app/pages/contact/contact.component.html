@@ -78,6 +78,10 @@
 
     <button type="submit" class="primary-button">Send message</button>
   </form>
+
+  @if (submissionError) {
+    <p class="form-error" role="alert">We could not send your message. Please try again.</p>
+  }
 </section>
 
 @if (showSuccessModal) {
