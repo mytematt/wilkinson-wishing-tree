@@ -3,14 +3,14 @@
 :host {
   display: block;
   min-height: 100vh;
-  background: #f9f6f2;
+  background: var(--ivory);
   color: var(--ink);
 }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f6f2;
+  background: var(--ivory);
   color: var(--ink);
 }
 

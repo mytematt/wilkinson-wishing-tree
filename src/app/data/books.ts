@@ -9,7 +9,7 @@ export const books: Book[] = [
     description:
       'A warm and uplifting story about hope, community, and the light we carry for one another.',
     price: 18.99,
-    coverImage: '/assets/images/books/lantern-keeper.jpg',
+    coverImage: '/assets/images/books/Cover.png',
     publishedYear: 2024,
     category: 'Fiction',
     status: 'Available'
@@ -22,7 +22,7 @@ export const books: Book[] = [
     description:
       'A lyrical collection of heartfelt notes and reflections exploring resilience, belonging, and renewal.',
     price: 16.5,
-    coverImage: '/assets/images/books/wildflower-letters.jpg',
+    coverImage: '/assets/images/books/GreatSnomanCover-comingsoon.png',
     publishedYear: 2023,
     category: 'Poetry',
     status: 'Available'
@@ -35,7 +35,7 @@ export const books: Book[] = [
     description:
       'A gentle, beautifully told journey into memory, family, and the quiet wisdom of place.',
     price: 21.0,
-    coverImage: '/assets/images/books/orchard-at-dusk.jpg',
+    coverImage: '/assets/images/books/HardcoverQRcode.png',
     publishedYear: 2025,
     category: 'Novel',
     status: 'Coming Soon'

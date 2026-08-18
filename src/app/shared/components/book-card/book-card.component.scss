@@ -1,6 +1,6 @@
 .book-card {
   background: white;
-  border: 1px solid rgba(28, 58, 45, 0.08);
+  border: 1px solid rgba(81, 69, 63, 0.08);
   border-radius: 1.2rem;
   overflow: hidden;
   box-shadow: 0 18px 34px var(--shadow);
@@ -11,7 +11,7 @@
   height: 280px;
   object-fit: cover;
   display: block;
-  background: var(--forest-soft);
+  background: var(--blush);
 }
 
 .book-card__content {
@@ -23,7 +23,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--forest);
+  color: var(--rose);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -62,5 +62,5 @@
 
 .price {
   font-weight: 800;
-  color: var(--forest);
+  color: var(--cocoa);
 }

@@ -1,18 +1,23 @@
-$forest: #1c3a2d;
-$forest-soft: #e9f3ee;
-$gold: #d9b76e;
-$stone: #f7f3ee;
-$ink: #1f1f1f;
-$muted: #5a5a5a;
+$ivory: #f7f2e8;
+$blush: #ebd0ce;
+$rose: #d8a6a6;
+$sage: #a8b540;
+$taupe: #b5a497;
+$cocoa: #51453f;
+$gold: #d2956d;
 
 :root {
-  --forest: #{$forest};
-  --forest-soft: #{$forest-soft};
+  --ivory: #{$ivory};
+  --blush: #{$blush};
+  --rose: #{$rose};
+  --sage: #{$sage};
+  --taupe: #{$taupe};
+  --cocoa: #{$cocoa};
   --gold: #{$gold};
-  --stone: #{$stone};
-  --ink: #{$ink};
-  --muted: #{$muted};
-  --shadow: rgba(28, 58, 45, 0.12);
+  --stone: #{$ivory};
+  --ink: #{$cocoa};
+  --muted: #{$taupe};
+  --shadow: rgba(81, 69, 63, 0.12);
 }
 
 .container {
@@ -24,7 +29,7 @@ $muted: #5a5a5a;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--forest);
+  color: var(--rose);
   font-weight: 700;
   margin-bottom: 0.9rem;
 }
@@ -62,14 +67,15 @@ $muted: #5a5a5a;
 }
 
 .primary-button {
-  background: var(--forest);
-  color: white;
+  background: var(--rose);
+  color: var(--cocoa);
+  box-shadow: 0 10px 20px rgba(216, 166, 166, 0.25);
 }
 
 .secondary-button {
-  background: transparent;
-  border-color: rgba(28, 58, 45, 0.2);
-  color: var(--forest);
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(181, 164, 151, 0.45);
+  color: var(--cocoa);
 }
 
 .primary-button:hover,
