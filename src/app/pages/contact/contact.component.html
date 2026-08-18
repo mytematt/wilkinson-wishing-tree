@@ -58,7 +58,8 @@
 </section>
 
 <section class="container contact-form-section">
-  <form class="contact-form" name="contact" method="POST" data-netlify="true">
+  <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" (submit)="onSubmit($event)">
+    <input type="hidden" name="form-name" value="contact" />
 
     <div class="form-row">
       <label for="name">Name</label>
@@ -78,3 +79,13 @@
     <button type="submit" class="primary-button">Send message</button>
   </form>
 </section>
+
+@if (showSuccessModal) {
+  <div class="success-modal-backdrop" (click)="closeSuccessModal()">
+    <div class="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-modal-title" (click)="$event.stopPropagation()">
+      <button type="button" class="close-button" aria-label="Close" (click)="closeSuccessModal()">×</button>
+      <h2 id="success-modal-title">Thank you for reaching out.</h2>
+      <p>We will be in contact shortly.</p>
+    </div>
+  </div>
+}

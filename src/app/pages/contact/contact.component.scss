@@ -94,6 +94,53 @@
   resize: vertical;
 }
 
+.success-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: rgba(81, 69, 63, 0.45);
+  padding: 1.5rem;
+}
+
+.success-modal {
+  position: relative;
+  width: min(100%, 480px);
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 1.25rem;
+  background: white;
+  box-shadow: 0 18px 40px rgba(81, 69, 63, 0.2);
+  text-align: center;
+}
+
+.success-modal h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--cocoa);
+}
+
+.success-modal p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(216, 166, 166, 0.18);
+  color: var(--cocoa);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   .contact-wrap {
     grid-template-columns: 1fr;
