@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 import { BookService } from '../../core/services/book.service';
@@ -7,6 +8,7 @@ import { Book } from '../../core/models/book.model';
 @Component({
   selector: 'app-book-detail',
   standalone: true,
+  imports: [CurrencyPipe],
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.scss'
 })

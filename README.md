@@ -57,3 +57,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Square payments
+
+The book detail page supports Square-hosted Payment Links. In the Square Dashboard, create a Payment Link for each available book, then set its URL in `src/app/data/books.ts` as `squarePaymentLink` and set the book's `price` in dollars. The link opens Square's hosted checkout, so no Square access token is stored in this frontend.

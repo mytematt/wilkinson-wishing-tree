@@ -10,6 +10,25 @@
       <p class="description">{{ book.description }}</p>
       <p class="synopsis">{{ book.synopsis }}</p>
 
+      @if (book.squarePaymentLink && book.status === 'Available') {
+        <div class="purchase-row">
+          <div>
+            <span class="purchase-label">Available now</span>
+            @if (book.price !== null) {
+              <strong class="price">{{ book.price | currency }}</strong>
+            }
+          </div>
+          <a
+            class="primary-button"
+            [href]="book.squarePaymentLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy with Square
+          </a>
+        </div>
+      }
+
       @if (book.hardcover || book.paperback) {
         <div class="where-to-buy">
           <h3>Where to Buy</h3>

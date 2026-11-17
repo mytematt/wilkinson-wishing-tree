@@ -7,6 +7,7 @@ export interface Book {
   synopsis: string;
   hardcover?: string | null;
   paperback?: string | null;
+  squarePaymentLink?: string | null;
   price: number | null;
   coverImage: string;
   publishedYear: string;

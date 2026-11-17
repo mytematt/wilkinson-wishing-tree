@@ -74,6 +74,23 @@
   font-weight: 600;
 }
 
+.purchase-row {
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(81, 69, 63, 0.12);
+  border-bottom: 1px solid rgba(81, 69, 63, 0.12);
+}
+
+.purchase-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--sage);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .price {
   font-size: 1.6rem;
 }
